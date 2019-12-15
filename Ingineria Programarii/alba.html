@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center"> Care dintre urmatoarele monumente apartine judetului Alba? </h1>
+
+    <div class="answers">
+        <label><input type="radio" value="0" name="q1">a) Palatul Parlamentului</label>
+        <br><br>
+        <label><input type="radio" value="0" name="q1">b) Masa Tacerii</label>
+        <br><br>
+        <label><input type="radio" value="1" name="q1">c) Obeliscul „Horea, Cosca si Crisan”</label>
+        <br><br>
+      </div>
+      <br>
+      <input type="button" id="check" value="Verifica">
+      <script>
+      window.onload = function() {
+  check.onclick = result;
+}
+
+function result() {
+  var score = 0;
+  score += parseInt(getSelectedRadioValue("q1")) || 0;
+if (score == 1) {
+  alert("Raspuns corect");
+}else{
+  alert("Raspuns gresit");
+}
+}
+
+
+function getSelectedRadioValue(name) {
+  var radios = document.getElementsByName(name);
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      return radios[i].value;
+    }
+  }
+}
+      </script>
+</body>
+</html>
