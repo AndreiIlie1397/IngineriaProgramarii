@@ -18,7 +18,7 @@
     }
 
     .header{
-    height: 120px;
+    height: 100px;
     background-color: lightblue;
     opacity: 0.75;
     filter: Alpha(opacity=50); /* IE8 and earlier */
@@ -43,7 +43,6 @@
     padding: 15px;
 }
 
-
     * {
       box-sizing: border-box;
     }
@@ -61,8 +60,8 @@
 </head>
 <body>
 <div class="header">
-  <h1 id="test1">Trivia Game</h1>
-
+  <div align="right">Timp ramas <span id="time">05:00</span> minute!</div>
+  <h1 id="test1">TriviaRom</h1>
 </div>
 <div class="main">
 
@@ -81,6 +80,128 @@
   </div>
 </footer>
   <script>
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+        timer--;
+        if (timer == 0) {
+          var r=confirm("Jocul s-a incheiat. \n\nDoriti sa incercati din nou?");
+          if(r==true) 
+          {
+          timer = duration;
+          location.reload();
+          sessionStorage.setItem("coloralba", "white");
+          sessionStorage.setItem("colorarad", "white");
+          sessionStorage.setItem("colorarges", "white");
+          sessionStorage.setItem("colorbacau", "white");
+          sessionStorage.setItem("colorbihor", "white");
+          sessionStorage.setItem("colorbistrita_nasaud", "white");
+          sessionStorage.setItem("colorbotosani", "white");
+          sessionStorage.setItem("colorbraila", "white");
+          sessionStorage.setItem("colorbrasov", "white");
+          sessionStorage.setItem("colorbuzau", "white");
+          sessionStorage.setItem("colorcalarasi", "white");
+          sessionStorage.setItem("colorcaras_severin", "white");
+          sessionStorage.setItem("colorcluj", "white");
+          sessionStorage.setItem("colorconstanta", "white");
+          sessionStorage.setItem("colorcovasna", "white");
+          sessionStorage.setItem("colordambovita", "white");
+          sessionStorage.setItem("colordolj", "white");
+          sessionStorage.setItem("colorgalati", "white");
+          sessionStorage.setItem("colorgiurgiu", "white");
+          sessionStorage.setItem("colorgorj", "white");
+          sessionStorage.setItem("colorharghita", "white");
+          sessionStorage.setItem("colorhunedoara", "white");
+          sessionStorage.setItem("colorialomita", "white");
+          sessionStorage.setItem("coloriasi", "white");
+          sessionStorage.setItem("colorilfov", "white");
+          sessionStorage.setItem("colorbucuresti", "white");
+          sessionStorage.setItem("colormaramures", "white");
+          sessionStorage.setItem("colormehedinti", "white");
+          sessionStorage.setItem("colormures", "white");
+          sessionStorage.setItem("colorneamt", "white");
+          sessionStorage.setItem("colorolt", "white");
+          sessionStorage.setItem("colorprahova", "white");
+          sessionStorage.setItem("colorsalaj", "white");
+          sessionStorage.setItem("colorsatu_mare", "white");
+          sessionStorage.setItem("colorsibiu", "white");
+          sessionStorage.setItem("colorsuceava", "white");
+          sessionStorage.setItem("colorteleorman", "white");
+          sessionStorage.setItem("colortimis", "white");
+          sessionStorage.setItem("colortulcea", "white");
+          sessionStorage.setItem("colorvalcea", "white");
+          sessionStorage.setItem("colorvaslui", "white");
+          sessionStorage.setItem("colorvrancea", "white");
+          window.open("map.html", "frame1");
+          }
+          else
+          {
+            location.reload();
+            if (sessionStorage.getItem("coloralba") == null || sessionStorage.getItem("coloralba") == "white"){sessionStorage.setItem("coloralba", "red");}
+            if (sessionStorage.getItem("colorarad") == null || sessionStorage.getItem("colorarad") == "white"){sessionStorage.setItem("colorarad", "red");}
+            if (sessionStorage.getItem("colorarges") == null || sessionStorage.getItem("colorarges") == "white"){sessionStorage.setItem("colorarges", "red");}
+            if (sessionStorage.getItem("colorbacau") == null || sessionStorage.getItem("colorbacau") == "white"){sessionStorage.setItem("colorbacau", "red");}
+            if (sessionStorage.getItem("colorbihor") == null || sessionStorage.getItem("colorbihor") == "white"){sessionStorage.setItem("colorbihor", "red");}
+            if (sessionStorage.getItem("colorbistrita_nasaud") == null || sessionStorage.getItem("colorbistrita_nasaud") == "white"){sessionStorage.setItem("colorbistrita_nasaud", "red");}
+            if (sessionStorage.getItem("colorbotosani") == null || sessionStorage.getItem("colorbotosani") == "white"){sessionStorage.setItem("colorbotosani", "red");}
+            if (sessionStorage.getItem("colorbraila") == null || sessionStorage.getItem("colorbraila") == "white"){sessionStorage.setItem("colorbraila", "red");}
+            if (sessionStorage.getItem("colorbrasov") == null || sessionStorage.getItem("colorbrasov") == "white"){sessionStorage.setItem("colorbrasov", "red");}
+            if (sessionStorage.getItem("colorbuzau") == null || sessionStorage.getItem("colorbuzau") == "white"){sessionStorage.setItem("colorbuzau", "red");}
+            if (sessionStorage.getItem("colorcalarasi") == null || sessionStorage.getItem("colorcalarasi") == "white"){sessionStorage.setItem("colorcalarasi", "red");}
+            if (sessionStorage.getItem("colorcaras_severin") == null || sessionStorage.getItem("colorcaras_severin") == "white"){sessionStorage.setItem("colorcaras_severin", "red");}
+            if (sessionStorage.getItem("colorcluj") == null || sessionStorage.getItem("colorcluj") == "white"){sessionStorage.setItem("colorcluj", "red");}
+            if (sessionStorage.getItem("colorconstanta") == null || sessionStorage.getItem("colorconstanta") == "white"){sessionStorage.setItem("colorconstanta", "red");}
+            if (sessionStorage.getItem("colorcovasna") == null || sessionStorage.getItem("colorcovasna") == "white"){sessionStorage.setItem("colorcovasna", "red");}
+            if (sessionStorage.getItem("colordambovita") == null || sessionStorage.getItem("colordambovita") == "white"){sessionStorage.setItem("colordambovita", "red");}
+            if (sessionStorage.getItem("colordolj") == null || sessionStorage.getItem("colordolj") == "white"){sessionStorage.setItem("colordolj", "red");}
+            if (sessionStorage.getItem("colorgalati") == null || sessionStorage.getItem("colorgalati") == "white"){sessionStorage.setItem("colorgalati", "red");}
+            if (sessionStorage.getItem("colorgiurgiu") == null || sessionStorage.getItem("colorgiurgiu") == "white"){sessionStorage.setItem("colorgiurgiu", "red");}
+            if (sessionStorage.getItem("colorgorj") == null || sessionStorage.getItem("colorgorj") == "white"){sessionStorage.setItem("colorgorj", "red");}
+            if (sessionStorage.getItem("colorharghita") == null || sessionStorage.getItem("colorharghita") == "white"){sessionStorage.setItem("colorharghita", "red");}
+            if (sessionStorage.getItem("colorhunedoara") == null || sessionStorage.getItem("colorhunedoara") == "white"){sessionStorage.setItem("colorhunedoara", "red");}
+            if (sessionStorage.getItem("colorialomita") == null || sessionStorage.getItem("colorialomita") == "white"){sessionStorage.setItem("colorialomita", "red");}
+            if (sessionStorage.getItem("coloriasi") == null || sessionStorage.getItem("coloriasi") == "white"){sessionStorage.setItem("coloriasi", "red");}
+            if (sessionStorage.getItem("colorilfov") == null || sessionStorage.getItem("colorilfov") == "white"){sessionStorage.setItem("colorilfov", "red");}
+            if (sessionStorage.getItem("colorbucuresti") == null || sessionStorage.getItem("colorbucuresti") == "white"){sessionStorage.setItem("colorbucuresti", "red");}
+            if (sessionStorage.getItem("colormaramures") == null || sessionStorage.getItem("colormaramures") == "white"){sessionStorage.setItem("colormaramures", "red");}
+            if (sessionStorage.getItem("colormehedinti") == null || sessionStorage.getItem("colormehedinti") == "white"){sessionStorage.setItem("colormehedinti", "red");}
+            if (sessionStorage.getItem("colormures") == null || sessionStorage.getItem("colormures") == "white"){sessionStorage.setItem("colormures", "red");}
+            if (sessionStorage.getItem("colorneamt") == null || sessionStorage.getItem("colorneamt") == "white"){sessionStorage.setItem("colorneamt", "red");}
+            if (sessionStorage.getItem("colorolt") == null || sessionStorage.getItem("colorolt") == "white"){sessionStorage.setItem("colorolt", "red");}
+            if (sessionStorage.getItem("colorprahova") == null || sessionStorage.getItem("colorprahova") == "white"){sessionStorage.setItem("colorprahova", "red");}
+            if (sessionStorage.getItem("colorsalaj") == null || sessionStorage.getItem("colorsalaj") == "white"){sessionStorage.setItem("colorsalaj", "red");}
+            if (sessionStorage.getItem("colorsatu_mare") == null || sessionStorage.getItem("colorsatu_mare") == "white"){sessionStorage.setItem("colorsatu_mare", "red");}
+            if (sessionStorage.getItem("colorsibiu") == null || sessionStorage.getItem("colorsibiu") == "white"){sessionStorage.setItem("colorsibiu", "red");}
+            if (sessionStorage.getItem("colorsuceava") == null || sessionStorage.getItem("colorsuceava") == "white"){sessionStorage.setItem("colorsuceava", "red");}
+            if (sessionStorage.getItem("colorteleorman") == null || sessionStorage.getItem("colorteleorman") == "white"){sessionStorage.setItem("colorteleorman", "red");}
+            if (sessionStorage.getItem("colortimis") == null || sessionStorage.getItem("colortimis") == "white"){sessionStorage.setItem("colortimis", "red");}
+            if (sessionStorage.getItem("colortulcea") == null || sessionStorage.getItem("colortulcea") == "white"){sessionStorage.setItem("colortulcea", "red");}
+            if (sessionStorage.getItem("colorvalcea") == null || sessionStorage.getItem("colorvalcea") == "white"){sessionStorage.setItem("colorvalcea", "red");}
+            if (sessionStorage.getItem("colorvaslui") == null || sessionStorage.getItem("colorvaslui") == "white"){sessionStorage.setItem("colorvaslui", "red");}
+            if (sessionStorage.getItem("colorvrancea") == null || sessionStorage.getItem("colorvrancea") == "white"){sessionStorage.setItem("colorvrancea", "red");}
+            window.open("map.html", "frame1");
+         }
+         
+        }
+       
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+                startTimer(fiveMinutes, display);
+                
+};
+
+      
 
     function image() {
       if ((sessionStorage.getItem("coloralba") == "green" || sessionStorage.getItem("coloralba") == "red") &&

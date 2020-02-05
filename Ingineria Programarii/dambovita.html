@@ -89,7 +89,21 @@
 }
 body {
  font-family: 'Fira Sans', sans-serif;
+ background-image: url("https://aventurainromania.ro/wp-content/uploads/2017/11/Sfinxul_Bucegi.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-size: 700px 478px;
+    opacity: 0.75;
+    filter: alpha(opacity=50);
 }
+
+body:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
 *, *::before, *::after {
  box-sizing: inherit;
 }
